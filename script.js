@@ -3,6 +3,12 @@ const place = document.getElementById('location');
 const addCat =  document.getElementById('addCat');
 const cats =  document.getElementById('cats');
 
+addCat.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    cats.appendChild(addFigure(catInput.value, place.value));
+});
+
 function addFigure(catName, place) {
     const figure = document.createElement('figure');
     figure.className = 'card';
@@ -21,12 +27,6 @@ function addFigure(catName, place) {
     figure.appendChild(img);
     figure.appendChild(figcaption);
     figure.classList.add('pop');
-    
 
     return figure;
 }
-addCat.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    cats.appendChild(addFigure(catInput.value, place.value));
-});
