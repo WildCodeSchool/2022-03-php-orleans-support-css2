@@ -11,7 +11,16 @@
 
 <body>
     <h1>Support #2</h1>
-    <main class="cards">
+    <header>
+        <form class="search" id="addCat" action="">
+            <label for="catName">Cat name</label>
+            <input type="text" id="catName">
+            <label for="location">Location</label>
+            <input type="text" id="location">
+            <button id="addButton">Add</button>
+        </form>
+    </header>
+    <main class="cards" id="cats">
         <figure class="card">
             <img src="http://placekitten.com/100/300" alt="">
             <figcaption>
@@ -41,6 +50,8 @@
             </figcaption>
         </figure>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
